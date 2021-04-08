@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700&display=swap');
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+/*Шрифты*/
+@font-face {
+	font-family: "CeraPro";
+	src: url(../fonts/Cera Pro Black Italic.otf);
+	src: url(../fonts/Cera Pro Black Italic.ttf);
+}
+
+/*------*/
+body{
+	background: #E9EFFC;
+}
+.h1-style{
+	font-family: 'M PLUS 1p', sans-serif;
+	font-size: 24px;
+	color: #455273;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 30px;
+}
+
+.h2-style{
+	font-family: 'M PLUS 1p', sans-serif;
+	font-size: 18px;
+	color: #455273;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 30px;
+}
+
+.p-style{
+	font-family: 'M PLUS 1p', sans-serif;
+	color: #818fb2;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 21px;
+	letter-spacing: 0.1px;
+}
+.wrapper{
+	max-width: 1140px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+}
+.main-part{
+}
+.centering{
+	margin-top: 20vh;
+}
+.main-img{
+	margin-bottom: 25px
+	
+}
+.bottle{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 130px;
+;
+}
+.header{
+	text-align: center;
+	margin-bottom: 40px;
+}
+.header-text{
+	font-family: 'M PLUS 1p', sans-serif;
+}
+
+
+.decription{
+	text-align: center;
+	max-width: 240px;
+}
+
+.discription-text{
+	font-family: 'M PLUS 1p', sans-serif;
+}
+
+.button{
+	width: 165px;
+	height: 40px;
+	background: #418DE8;
+	border-radius: 20px;
+	display: none;
+	color: #fff;
+	margin: 0 auto;
+	margin-top: 68px;
+	font-family: 'M PLUS 1p', sans-serif;
+	transition: 0.3s;
+}
+.button:focus,
+.button:hover{
+	background: #75A8E4;
+}
+@media (max-width: 767px) {
+	.button{
+		display: block;
+	}
+}
+.reg-card{
+	background: #F5F8FF;
+	border-radius: 6px;
+	margin-top: 30px;
+	padding: 40px;
+}
+@media (max-width: 1200px) {
+	.reg-card{
+	}
+}
+@media (max-width: 992px) {
+	.reg-card{
+	}
+}
+@media (max-width: 767px) {
+	.reg-card{
+		display: none;	
+	}
+}
+.form-discr{
+	margin-bottom: 40px;
+}
+.form
+{
+	display: flex;
+/*flex-direction: column;
+*/	font-family: 'M PLUS 1p', sans-serif;
+}
+
+.form-group{
+	position: relative;
+	margin-bottom: 30px;
+}
+/*.form-label{
+	position: absolute;
+	top: 0;
+	z-index: 0;
+	color: #455273;
+	transition: 0.3s;
+}
+*/
+.form-input{
+	width: 100%;
+	padding: 0 0 8px 0;
+	border: none;
+	border-bottom: 1px solid #D5DDE0;
+	background-color: transparent;
+	outline: none;
+	transition: 0.3s;
+	font-family: 'M PLUS 1p', sans-serif;
+	font-size: 12px;
+	line-height: 15px;
+	color: #455273;
+}
+.form-input:focus{
+	border-bottom: 1px solid #455273;
+}
+.form-part1{
+	margin-right: 80px;
+	width: 325px;
+}
+.form-part2{
+	width: 325px;
+}
+/* для элемента input c type="checkbox" */
+    .custom-checkbox {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+
+    /* для элемента label, связанного с .custom-checkbox */
+    .custom-checkbox+label {
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+    }
+
+    /* создание в label псевдоэлемента before со следующими стилями */
+    .custom-checkbox+label::before {
+      content: '';
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border: 1px solid #adb5bd;
+      border-radius: 0.25em;
+      margin-right: 0.5em;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+    }
+
+    /* стили при наведении курсора на checkbox */
+    .custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+      border-color: #b3d7ff;
+    }
+
+    /* стили для активного чекбокса (при нажатии на него) */
+    .custom-checkbox:not(:disabled):active+label::before {
+      background-color: #b3d7ff;
+      border-color: #b3d7ff;
+    }
+
+    /* стили для чекбокса, находящегося в фокусе */
+    .custom-checkbox:focus+label::before {
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+
+    /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+    .custom-checkbox:focus:not(:checked)+label::before {
+      border-color: #80bdff;
+    }
+
+    /* стили для чекбокса, находящегося в состоянии checked */
+    .custom-checkbox:checked+label::before {
+      border-color: #0b76ef;
+      background-color: #0b76ef;
+      background-image: url("../img/svg/Vector.svg");
+    }
+
+    /* стили для чекбокса, находящегося в состоянии disabled */
+    .custom-checkbox:disabled+label::before {
+      background-color: #e9ecef;
+   }
+.line{
+	border-top: 1px dashed #D5DDE0;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.choice-conteiner{
+	display: flex;
+}
+.bottle-choice{
+	width: 325px;
+	margin-right: 80px;
+}
+.bottle-bottom{
+	margin-bottom: 20px;
+}
+.time-choice{
+	width: 325px;
+}
+.cards{
+	display: flex;
+}
+.card-bg{
+	background-image: url("../img/svg/big_bot.svg");
+	padding: 12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.card-sm{
+	background-image: url("../img/svg/small_bot.svg");
+	padding: 12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.card-right{
+	margin-right: 20px;
+}
+.card-size{
+	width: 96px;
+	height: 130px;
+}
+.volume-title{
+	font-family: 'M PLUS 1p', sans-serif;
+	font-size: 18px;
+	color: #455273;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 23px;
+}
+.title{
+	font-family: 'M PLUS 1p', sans-serif;
+	font-style: normal;
+font-weight: 500;
+font-size: 10px;
+line-height: 13px;
+color: #BABDC2;
+}
+.price{
+	font-family: 'M PLUS 1p', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 15px;
+	color: #FFFFFF;
+}
